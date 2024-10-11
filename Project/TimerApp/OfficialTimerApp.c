@@ -24,25 +24,25 @@ int main(){
 		fflush(stdout); //// Đảm bảo in ngay lập tức
 		
 		// Tăng giây
-        second++;
-        
-        // Cập nhật giờ, phút, giây
-        if (second == 60) {
-            minute++;
-            second = 0;
-        }
-        if (minute == 60) {
-            hour++;
-            minute = 0;
-        }
-        if (hour == 24) {
-            hour = 0;
-            minute = 0;
-            second = 0;
-        }
+	        second++;
+	        
+	        // Cập nhật giờ, phút, giây
+	        if (second == 60) {
+	            minute++;
+	            second = 0;
+	        }
+	        if (minute == 60) {
+	            hour++;
+	            minute = 0;
+	        }
+	        if (hour == 24) {
+	            hour = 0;
+	            minute = 0;
+	            second = 0;
+        	}
 		
 		// Chờ 1 giây
-        SLEEP(1);
+	        SLEEP(1);
 	}
 	return 0;
 }
