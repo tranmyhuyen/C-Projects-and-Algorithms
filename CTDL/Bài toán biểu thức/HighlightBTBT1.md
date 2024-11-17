@@ -17,3 +17,24 @@
    - Sử dụng cây biểu thức để đánh giá kết quả khi gặp lệnh `PRINT`.
 
 Bài toán yêu cầu thiết kế chương trình linh hoạt để xử lý biến, tính toán biểu thức phức tạp và quản lý dữ liệu biến hiệu quả.
+
+### Cách 1
+#### 1. Stack (Ngăn xếp):
+
+Dùng để chuyển đổi biểu thức từ dạng trung tố (infix) sang dạng hậu tố (postfix) theo thuật toán Shunting-yard.
+Hỗ trợ trong quá trình xây dựng cây biểu thức từ biểu thức hậu tố bằng cách lưu trữ các nút khi gặp toán tử.
+#### 2.Tree (Cây biểu thức):
+
+Cấu trúc cây biểu thức giúp biểu diễn và đánh giá biểu thức toán học. Cây giúp xác định thứ tự thực hiện các phép toán và cho phép đánh giá biểu thức một cách tự nhiên theo cấu trúc cây.
+Khi cây đã được tạo, việc tính toán giá trị của biểu thức trở nên dễ dàng thông qua duyệt cây (theo thứ tự hậu tự).
+#### 3. Hash Table (Bảng băm):
+
+Dùng để lưu trữ và quản lý giá trị của các biến trong biểu thức.
+Khi gặp lệnh SET, bảng băm sẽ cập nhật hoặc thêm giá trị cho biến tương ứng.
+Khi đánh giá biểu thức, nếu gặp biến, chương trình sẽ tra cứu giá trị biến trong bảng băm.
+
+### Tổng kết
+Stack giúp xử lý toán tử/toán hạng và chuyển đổi biểu thức.
+Tree giúp đánh giá biểu thức một cách có cấu trúc.
+Hash Table giúp lưu trữ và quản lý giá trị các biến.
+Sự kết hợp của ba cấu trúc này đảm bảo chương trình xử lý linh hoạt và chính xác các biểu thức phức tạp và các lệnh cập nhật giá trị biến.
