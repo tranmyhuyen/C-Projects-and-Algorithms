@@ -39,7 +39,34 @@ Tree giúp đánh giá biểu thức một cách có cấu trúc.
 Hash Table giúp lưu trữ và quản lý giá trị các biến.
 Sự kết hợp của ba cấu trúc này đảm bảo chương trình xử lý linh hoạt và chính xác các biểu thức phức tạp và các lệnh cập nhật giá trị biến.
 
-### Cách 2 Sử dụng ngăn xếp Stack, xây dựng cây biểu thức Tree và quản lý biến thông qua bảng băm đơn giản Variable
+### Cách 2 Sử dụng ngăn xếp Stack, xây dựng cây biểu thức Tree và quản lý biến thông qua bảng băm đơn giản Variable 
+
+Một stack là một cấu trúc dữ liệu với các thao tác chính là push (thêm phần tử vào đỉnh), pop (loại bỏ phần tử từ đỉnh), và top (truy cập phần tử đỉnh).
+Khi xử lý biểu thức hậu tố, chúng ta sẽ sử dụng stack để lưu trữ các toán hạng và thực hiện các phép tính khi gặp toán tử. 
 
 ### Cách 3 Chuyển đổi biểu thức từ trung tố sang hậu tố và cách đánh giá biểu thức hậu tố bằng cách sử dụng ngăn xếp (stack), chưa xây dựng biểu thức cây (expression tree) hay sử dụng hàm băm (hash map)
+#### Giải thích các hàm:
 
+#### var_count
+Biến var_count không phải là kích thước của mảng vars mà giúp chúng ta theo dõi bao nhiêu biến đã được thêm vào mảng. Điều này giúp:
+
+- Xác định vị trí hợp lệ tiếp theo để thêm một biến mới khi thực hiện lệnh SET.
+- Kiểm tra từng biến trong mảng một cách hiệu quả khi thực hiện tìm kiếm (get_variable_value).
+  
+#### get_variable_value và set_variable_value:
+
+- get_variable_value tìm giá trị của một biến từ danh sách.
+- set_variable_value cập nhật hoặc thêm mới biến vào danh sách.
+
+#### Chuyển đổi từ trung tố sang hậu tố (infix_to_postfix):
+
+Chuyển đổi biểu thức đầu vào thành dạng hậu tố dùng thuật toán Shunting-yard.
+#### Đánh giá biểu thức hậu tố (evaluate_postfix):
+
+Đánh giá biểu thức hậu tố bằng cách sử dụng ngăn xếp.
+
+#### Cách thức hoạt động của chương trình:
+- Biểu thức đầu vào được chuyển thành dạng hậu tố.
+- Mỗi khi gặp lệnh SET, giá trị của biến sẽ được cập nhật.
+- Khi gặp lệnh PRINT, biểu thức được đánh giá và in kết quả.
+- Lệnh DONE kết thúc chương trình.
