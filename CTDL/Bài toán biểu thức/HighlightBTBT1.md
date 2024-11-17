@@ -1,4 +1,4 @@
-### Ý chính yêu cầu của bài toán:
+## Ý chính yêu cầu của bài toán:
 
 1. **Đọc và xử lý biểu thức toán học dạng chuỗi**:
    - Biểu thức có thể chứa các số đơn (0-9), biến đơn ký tự (ví dụ: `x`, `y`), các phép toán (`+`, `-`, `*`), và dấu ngoặc `()`.
@@ -18,11 +18,15 @@
 
 Bài toán yêu cầu thiết kế chương trình linh hoạt để xử lý biến, tính toán biểu thức phức tạp và quản lý dữ liệu biến hiệu quả.
 
+## Cách giải
+
 ### Cách 1 Stack, Tree, Hash
+
 #### 1. Stack (Ngăn xếp):
 
 Dùng để chuyển đổi biểu thức từ dạng trung tố (infix) sang dạng hậu tố (postfix) theo thuật toán Shunting-yard.
 Hỗ trợ trong quá trình xây dựng cây biểu thức từ biểu thức hậu tố bằng cách lưu trữ các nút khi gặp toán tử.
+
 #### 2.Tree (Cây biểu thức):
 
 Cấu trúc cây biểu thức giúp biểu diễn và đánh giá biểu thức toán học. Cây giúp xác định thứ tự thực hiện các phép toán và cho phép đánh giá biểu thức một cách tự nhiên theo cấu trúc cây.
@@ -38,12 +42,12 @@ Stack giúp xử lý toán tử/toán hạng và chuyển đổi biểu thức.
 Tree giúp đánh giá biểu thức một cách có cấu trúc.
 Hash Table giúp lưu trữ và quản lý giá trị các biến.
 Sự kết hợp của ba cấu trúc này đảm bảo chương trình xử lý linh hoạt và chính xác các biểu thức phức tạp và các lệnh cập nhật giá trị biến.
-
+___
 ### Cách 2 Sử dụng ngăn xếp Stack, xây dựng cây biểu thức Tree và quản lý biến thông qua bảng băm đơn giản Variable 
 
 Một stack là một cấu trúc dữ liệu với các thao tác chính là push (thêm phần tử vào đỉnh), pop (loại bỏ phần tử từ đỉnh), và top (truy cập phần tử đỉnh).
 Khi xử lý biểu thức hậu tố, chúng ta sẽ sử dụng stack để lưu trữ các toán hạng và thực hiện các phép tính khi gặp toán tử. 
-
+___
 ### Cách 3 Chuyển đổi biểu thức từ trung tố sang hậu tố và cách đánh giá biểu thức hậu tố bằng cách sử dụng ngăn xếp (stack), chưa xây dựng biểu thức cây (expression tree) hay sử dụng hàm băm (hash map)
 #### Giải thích các hàm:
 
