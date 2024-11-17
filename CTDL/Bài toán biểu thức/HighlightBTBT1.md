@@ -18,7 +18,7 @@
 
 Bài toán yêu cầu thiết kế chương trình linh hoạt để xử lý biến, tính toán biểu thức phức tạp và quản lý dữ liệu biến hiệu quả.
 
-### Cách 1
+### Cách 1 Stack, Tree, Hash
 #### 1. Stack (Ngăn xếp):
 
 Dùng để chuyển đổi biểu thức từ dạng trung tố (infix) sang dạng hậu tố (postfix) theo thuật toán Shunting-yard.
@@ -33,8 +33,13 @@ Dùng để lưu trữ và quản lý giá trị của các biến trong biểu 
 Khi gặp lệnh SET, bảng băm sẽ cập nhật hoặc thêm giá trị cho biến tương ứng.
 Khi đánh giá biểu thức, nếu gặp biến, chương trình sẽ tra cứu giá trị biến trong bảng băm.
 
-### Tổng kết
+#### Tổng kết
 Stack giúp xử lý toán tử/toán hạng và chuyển đổi biểu thức.
 Tree giúp đánh giá biểu thức một cách có cấu trúc.
 Hash Table giúp lưu trữ và quản lý giá trị các biến.
 Sự kết hợp của ba cấu trúc này đảm bảo chương trình xử lý linh hoạt và chính xác các biểu thức phức tạp và các lệnh cập nhật giá trị biến.
+
+### Cách 2 Sử dụng ngăn xếp Stack, xây dựng cây biểu thức Tree và quản lý biến thông qua bảng băm đơn giản Variable
+
+### Cách 3 Chuyển đổi biểu thức từ trung tố sang hậu tố và cách đánh giá biểu thức hậu tố bằng cách sử dụng ngăn xếp (stack), chưa xây dựng biểu thức cây (expression tree) hay sử dụng hàm băm (hash map)
+
