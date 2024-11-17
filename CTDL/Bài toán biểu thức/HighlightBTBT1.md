@@ -47,9 +47,6 @@ ___
 
 Một stack là một cấu trúc dữ liệu với các thao tác chính là push (thêm phần tử vào đỉnh), pop (loại bỏ phần tử từ đỉnh), và top (truy cập phần tử đỉnh).
 Khi xử lý biểu thức hậu tố, chúng ta sẽ sử dụng stack để lưu trữ các toán hạng và thực hiện các phép tính khi gặp toán tử. 
-___
-### Cách 3 Chuyển đổi biểu thức từ trung tố sang hậu tố và cách đánh giá biểu thức hậu tố bằng cách sử dụng ngăn xếp (stack), chưa xây dựng biểu thức cây (expression tree) hay sử dụng hàm băm (hash map)
-#### Giải thích các hàm:
 
 #### var_count
 Biến var_count không phải là kích thước của mảng vars mà giúp chúng ta theo dõi bao nhiêu biến đã được thêm vào mảng. Điều này giúp:
